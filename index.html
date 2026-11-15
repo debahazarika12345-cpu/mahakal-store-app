@@ -3,70 +3,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mahakal Store</title>
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5;color:#222}
-header{background:#126b39;color:white;text-align:center;padding:25px}
-header h1{margin:5px}
-nav{text-align:center;padding:12px;background:#fff}
-button{background:#126b39;color:white;border:0;padding:12px;border-radius:7px;margin:5px}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px}
-.item{background:white;text-align:center;padding:15px;border-radius:10px}
-.item .pic{font-size:45px}
-.item h3{font-size:17px}.
-
-footer{text-align:center;padding:20px;background:#126b39;color:white}
+body{font-family:Arial;margin:0;background:#f5f5f5;text-align:center}
+header{background:#e65100;color:white;padding:22px}
+h1{margin:5px}
+.product{background:white;margin:15px;padding:15px;border-radius:10px}
+button{background:green;color:white;border:0;padding:12px;border-radius:6px}
 </style>
 </head>
 <body>
 <header>
 <h1>महाकाल स्टोर</h1>
-<h2>Mahakal Store</h2>
-<p>আপোনাৰ নিজৰ দোকান, আপোনাৰ নিজৰ বজাৰ</p>
+<p>Online Shopping Store</p>
 </header>
-
-<nav>
-<button onclick="showAll()">All Products</button>
-<button onclick="filter('Grocery')">किराना</button>
-<button onclick="filter('School')">School Items</button>
-<button onclick="filter('Bags')">Bags</button>
-<button onclick="filter('Other')">अन्य सामान</button>
-</nav>
-
-<h2 style="text-align:center">हमारे सामान</h2>
-<div class="products" id="products"></div>
-
-<footer>
-<h3>महाकाल स्टोर</h3>
-<p>Online Shopping</p>
-<p>दुकान से सामान लें या होम डिलीवरी पूछें।</p>
-</footer>
-
-<script>
-const items=[
-["🛒","किराना सामान","Grocery"],
-["📚","स्कूल-कॉलेज सामग्री","School"],
-["👜","महिलाओं के बैग","Bags"],
-["🖼️","फोटो फ्रेम","Other"],
-["🧸","खिलौने","Other"],
-["📷","फोटो और प्रिंटिंग","Other"]
-];
-
-function show(list=items){
-document.getElementById("products").innerHTML=
-list.map(p=>`<div class="item">
-<div class="pic">${p[0]}</div>
-<h3>${p[1]}</h3>
-<p>महाकाल स्टोर</p>
-</div>`).join("");
-}
-function filter(category){
-show(items.filter(p=>p[2]===category));
-}
-function showAll(){show();}
-show();
-</script>
+<div class="product">
+<h3>किराना सामान</h3>
+<p>महाकाल स्टोर में आपका स्वागत है।</p>
+</div>
+<div class="product">
+<h3>स्कूल-कॉलेज सामग्री</h3>
+<p>बैग, फोटो फ्रेम और खिलौने उपलब्ध।</p>
+</div>
+<div class="product">
+<h3>ऑर्डर करें</h3>
+<button onclick="location.href='https://wa.me/919365682697'">WhatsApp Order</button>
+</div>
 </body>
 </html>
-x
