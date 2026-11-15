@@ -1,50 +1,73 @@
-
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="as">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahakal Store</title>
-<style>
-body{font-family:Arial;text-align:center;margin:0;background:#fff8e8;color:#333}
-header{background:#8b0000;color:white;padding:25px}
-h1{margin:5px}
-main{padding:20px}
-.card{background:white;margin:15px auto;padding:20px;border-radius:12px;max-width:400px;box-shadow:0 2px 8px #ccc}
-button{background:#128c45;color:white;border:0;padding:13px 22px;border-radius:8px;font-size:17px}
-footer{background:#8b0000;color:white;padding:20px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7b1113">
+  <title>মহাকাল ষ্টোৰ | Mahakal Store</title>
+  <style>
+    :root{--maroon:#7b1113;--gold:#f4c76b;--cream:#fff8e9;--ink:#292321}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    header{background:linear-gradient(135deg,#651012,#a32124);color:#fff;text-align:center;padding:34px 18px 28px}
+    header .mark{font-size:42px}
+    h1{font-size:clamp(30px,7vw,44px);margin:4px 0;color:var(--gold)}
+    header p{margin:4px 0 0;font-size:16px}
+    main{max-width:900px;margin:auto;padding:22px 16px 42px}
+    .intro,.contact,.service{background:#fff;border-radius:16px;padding:20px;box-shadow:0 5px 18px #3d1a1010}
+    .intro{text-align:center;border:1px solid #f0dfc1}
+    h2{color:var(--maroon);margin:0 0 10px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+    .service{border-top:4px solid var(--gold)}
+    .service h3{margin:0 0 6px;color:var(--maroon);font-size:18px}
+    .service p{margin:0;color:#5b514c}
+    .contact{text-align:center;background:#fff1d5}
+    .phone{display:inline-block;background:var(--maroon);color:white;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:700;margin-top:8px}
+    .note{font-size:13px;color:#6e625b;margin-top:14px}
+    footer{text-align:center;padding:18px;background:#4e0d0f;color:#fff;font-size:13px}
+  </style>
 </head>
 <body>
-<header>
-<h1>महाकाल स्टोर</h1>
-<p>Mahakal Store - Online Shopping</p>
-</header>
-<main>
-<h2>हमारे स्टोर में आपका स्वागत है</h2>
-<div class="card">
-<h3>स्कूल और कॉलेज सामग्री</h3>
-<p>किताबें, कॉपी और स्टेशनरी</p>
-</div>
-<div class="card">
-<h3>फोटो और जेरॉक्स</h3>
-<p>पासपोर्ट फोटो, रंगीन फोटो और जेरॉक्स</p>
-</div>
-<div class="card">
-<h3>रिचार्ज और बिल भुगतान</h3>
-<p>मोबाइल रिचार्ज, टीवी रिचार्ज और बिजली बिल</p>
-</div>
-<div class="card">
-<h3>ऑर्डर और जानकारी</h3>
-<p>सामान खरीदने के लिए WhatsApp करें</p>
-<a href="https://wa.me/919365682697">
-<button>WhatsApp पर संपर्क करें</button>
-</a>
-</div>
-</main>
-<footer>
-<p>महाकाल स्टोर</p>
-<p>कোঁচৰ গাঁও, বেবেজিয়া, নগাঁও, অসম</p>
-</footer>
+  <header>
+    <div class="mark">🛍️</div>
+    <h1>মহাকাল ষ্টোৰ</h1>
+    <p>Mahakal Store</p>
+    <p>আপোনাৰ ওচৰৰ সুবিধাজনক দোকান</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>আমাৰ দোকানলৈ স্বাগতম</h2>
+      <p>আমাৰ ইয়াত গেলামালৰ লগতে স্কুল-কলেজৰ সামগ্ৰী, পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা আছে।</p>
+    </section>
+
+    <section class="services" aria-label="আমাৰ সেৱাসমূহ">
+      <article class="service">
+        <h3>🛒 গেলামাল আৰু শিক্ষা সামগ্ৰী</h3>
+        <p>গেলামালৰ লগতে স্কুল-কলেজৰ প্ৰয়োজনীয় সামগ্ৰী।</p>
+      </article>
+      <article class="service">
+        <h3>📸 ফটো আৰু জেৰক্স</h3>
+        <p>পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা।</p>
+      </article>
+      <article class="service">
+        <h3>📱 ৰিচাৰ্জ আৰু বিল</h3>
+        <p>মবাইল ৰিচাৰ্জ, টিভি ৰিচাৰ্জ আৰু লাইটৰ বিল জমা।</p>
+      </article>
+      <article class="service">
+        <h3>🏦 বেংকিং সেৱা</h3>
+        <p>ফিংগাৰপ্ৰিণ্টৰ সহায়ত সকলো বেংকৰ টকা উলিওৱা আৰু পঠোৱাৰ সুবিধা।</p>
+      </article>
+    </section>
+
+    <section class="contact">
+      <h2>যোগাযোগ কৰক</h2>
+      <p>ফোন কৰি দোকানৰ বিষয়ে জানিব পাৰে।</p>
+      <a class="phone" href="tel:9365682697">📞 9365682697</a>
+      <p class="note">ঠিকনা: কোঁচৰ গাঁও – বেবেজিয়া – নগাঁও, অসম</p>
+    </section>
+  </main>
+
+  <footer>© Mahakal Store</footer>
 </body>
 </html>
