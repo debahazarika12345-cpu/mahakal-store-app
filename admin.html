@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahakal Store Admin</title>
+<style>
+body{font-family:Arial;background:#f3f5f3;padding:18px}
+.box{max-width:450px;margin:auto;background:white;padding:20px;border-radius:12px}
+input,button{width:100%;padding:12px;margin:8px 0;box-sizing:border-box}
+button{background:#14532d;color:white;border:0;border-radius:7px}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Mahakal Store - सामान जोड़ें</h2>
+<input id="name" placeholder="सामान का नाम">
+<input id="mrp" type="number" placeholder="MRP ₹">
+<input id="price" type="number" placeholder="बिक्री कीमत ₹">
+<input id="photo" type="file" accept="image/*">
+<button onclick="addProduct()">सामान जोड़ें</button>
+<p id="msg"></p>
+</div>
+<script>
+function addProduct(){
+ const name=document.getElementById('name').value.trim();
+ const mrp=document.getElementById('mrp').value;
+ const price=document.getElementById('price').value;
+ const photo=document.getElementById('photo').files[0];
+ if(!name||!mrp||!price||!photo){
+  document.getElementById('msg').textContent='सभी जानकारी भरें और फोटो चुनें।';
+  return;
+ }
+ const reader=new FileReader();
+ reader.onload=function(){
+  const products=JSON.parse(localStorage.getItem('mahakalProducts')||'[]');
+  products.push({name,mrp,price,photo:reader.result});
+  localStorage.setItem('mahakalProducts',JSON.stringify(products));
+  document.getElementById('msg').textContent='सामान इस मोबाइल में सेव हुआ।';
+ };
+ reader.readAsDataURL(photo);
+}
+</script>
+</body>
+</html>
