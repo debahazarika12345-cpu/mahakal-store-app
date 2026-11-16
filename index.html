@@ -72,7 +72,32 @@
 const products = JSON.parse(localStorage.getItem('mahakalProducts') || '[]');
 const area = document.getElementById('newProducts');
 
-const uniqueProducts = [...new Map(products.map(p => [p.name, p])).values()];
+let cart = JSON.parse(localStorage.getItem('mahakalCart') || '[]');
+
+const cartBox = document.createElement('div');
+area.before(cartBox);
+
+function showCart() {
+  cartBox.innerHTML = '<h2>🛒 My Cart</h2>';
+
+  cart.forEach((item, i) => {
+    cartBox.innerHTML += `
+      <p>${item.name} - ₹${item.price} 
+      <button onclick="removeItem(${i})">Remove</button></p>`;
+  });
+
+  localStorage.setItem('mahakalCart', JSON.stringify(cart));
+}
+
+function removeItem(i) {
+  cart.splice(i, 1);
+  showCart();
+}
+
+const uniqueProducts = [
+  ...new Map(products.map(p => [p.name, p])).values()
+];
+
 uniqueProducts.forEach(p => {
   area.innerHTML += `
     <div style="border:1px solid #ddd;padding:12px;margin:10px;border-radius:10px;text-align:center">
@@ -80,9 +105,17 @@ uniqueProducts.forEach(p => {
       <h3>${p.name}</h3>
       <p>MRP: ₹${p.mrp}</p>
       <h3>₹${p.price}</h3>
+      <button onclick="addCart('${p.name.replace(/'/g, "\\'")}',${Number(p.price)})">
+        Add to Cart 🛒
+      </button>
     </div>`;
 });
+
+function addCart(name, price) {
+  cart.push({name, price});
+  showCart();
+  alert('Added to Cart!');
+}
+
+showCart();
 </script>
-  <footer>© Mahakal Store</footer>
-</body>
-</html>
