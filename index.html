@@ -72,7 +72,8 @@
 const products = JSON.parse(localStorage.getItem('mahakalProducts') || '[]');
 const area = document.getElementById('newProducts');
 
-products.forEach(p => {
+const uniqueProducts = [...new Map(products.map(p => [p.name, p])).values()];
+uniqueProducts.forEach(p => {
   area.innerHTML += `
     <div style="border:1px solid #ddd;padding:12px;margin:10px;border-radius:10px;text-align:center">
       <img src="${p.photo}" style="width:120px;max-width:100%">
