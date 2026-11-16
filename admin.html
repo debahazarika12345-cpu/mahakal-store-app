@@ -34,7 +34,7 @@ function addProduct(){
  const reader=new FileReader();
  reader.onload=function(){
   const products=JSON.parse(localStorage.getItem('mahakalProducts')||'[]');
-  products.push({name,mrp,price,photo:reader.result});
+ if (!products.some(p => p.name.toLowerCase() === name.toLowerCase())) products.push({name,mrp,price,photo:reader.result});
   localStorage.setItem('mahakalProducts',JSON.stringify(products));
   document.getElementById('msg').textContent='सामान इस मोबाइल में सेव हुआ।';
  };
