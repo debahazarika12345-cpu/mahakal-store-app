@@ -116,6 +116,44 @@ function addCart(name, price) {
   showCart();
   alert('Added to Cart!');
 }
+function orderWhatsApp() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
 
+  let message = 'Namaste Mahakal Store! My Order:\n\n';
+
+  cart.forEach((item, i) => {
+    message += (i + 1) + '. ' + item.name + ' - ₹' + item.price + '\n';
+  });
+
+  let total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+  message += '\nTotal: ₹' + total;
+
+  window.open(
+    'https://wa.me/919365682697?text=' + encodeURIComponent(message),
+    '_blank'
+  );
+function orderWhatsApp() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+
+  let message = 'Namaste Mahakal Store! My Order:\n\n';
+
+  cart.forEach((item, i) => {
+    message += (i + 1) + '. ' + item.name + ' - ₹' + item.price + '\n';
+  });
+
+  let total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+  message += '\nTotal: ₹' + total;
+
+  window.open(
+    'https://wa.me/919365682697?text=' + encodeURIComponent(message),
+    '_blank'
+  );
+}
 showCart();
 </script>
