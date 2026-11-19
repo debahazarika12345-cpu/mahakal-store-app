@@ -146,7 +146,26 @@ function orderWhatsApp() {
   window.location.href =
 'https://wa.me/919365682697?text=' + encodeURIComponent(message);
 }
-showCart();
+showCart();function saveProduct() {
+  let name = document.getElementById('pName').value;
+  let mrp = document.getElementById('pMrp').value;
+  let price = document.getElementById('pPrice').value;
+  let photo = document.getElementById('pPhoto').value;
+
+  if (!name || !price) {
+    alert('Name aur price bhariye');
+    return;
+  }
+
+  let products = JSON.parse(localStorage.getItem('mahakalProducts') || '[]');
+
+  products.push({name, mrp, price, photo});
+
+  localStorage.setItem('mahakalProducts', JSON.stringify(products));
+
+  alert('Saman save ho gaya!');
+  location.reload();
+}
 </script>
 </body>
 </html>
