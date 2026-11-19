@@ -67,7 +67,19 @@
       <p class="note">ঠিকনা: কোঁচৰ গাঁও – বেবেজিয়া – নগাঁও, অসম</p>
    <a class="phone" href="#" onclick="orderWhatsApp(); return false;">📲 WhatsApp Order</a> </section>
   </main>
-<div id="newProducts"></div>
+<div id="newProducts"></div> <div style="background:#fff;padding:15px;margin:15px;border-radius:12px">
+  <h2>➕ नया सामान जोड़ें</h2>
+
+  <input id="pName" placeholder="सामान का नाम">
+
+  <input id="pMrp" type="number" placeholder="MRP कीमत">
+
+  <input id="pPrice" type="number" placeholder="बिक्री कीमत">
+
+  <input id="pPhoto" placeholder="फोटो का लिंक">
+
+  <button onclick="saveProduct()">सामान जोड़ें</button>
+</div>
 <script>
 const products = JSON.parse(localStorage.getItem('mahakalProducts') || '[]');
 const area = document.getElementById('newProducts');
