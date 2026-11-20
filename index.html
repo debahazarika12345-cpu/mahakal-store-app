@@ -349,11 +349,7 @@ onAuthStateChanged(auth,user=>{
     return;
   }
 
-  $("loginArea").classList.toggle("hidden",!!user);
-  $("adminArea").classList.toggle("hidden",!isAdmin());
 
-  renderProducts();
-});
 $("loginArea").classList.toggle("hidden",!!user);
 $("adminArea").classList.toggle("hidden",!user);
 renderProducts();
