@@ -2,29 +2,30 @@
 <html lang="as">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#7b1113">
 <title>মহাকাল ষ্টোৰ | Mahakal Store</title>
 <style>
-:root{--maroon:#7b1113;--gold:#f4c76b;--cream:#fff8e9}
+:root{--red:#7b1113;--gold:#f4c76b;--cream:#fff8e9}
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--cream);color:#292321}
-header{background:linear-gradient(135deg,#651012,#a32124);color:white;text-align:center;padding:30px 15px}
-header h1{color:var(--gold)}
-main{max-width:900px;margin:auto;padding:16px}
-.intro,.service,.contact,.panel,.product,.cart{background:white;padding:16px;border-radius:14px;margin:14px 0;box-shadow:0 3px 12px #00000010}
-h2{color:var(--maroon)}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.service{border-top:4px solid var(--gold)}
-.contact{text-align:center;background:#fff1d5}
-.phone,button{display:inline-block;background:var(--maroon);color:white;border:0;padding:12px 18px;border-radius:9px;text-decoration:none;font-size:15px;cursor:pointer}
-input{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;font-size:16px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+body{margin:0;background:var(--cream);color:#292321;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#651012,#a32124);color:white;text-align:center;padding:25px}
+header h1{color:var(--gold);margin:8px}
+main{max-width:950px;margin:auto;padding:15px}
+section,.product{background:white;padding:16px;border-radius:13px;margin:14px 0;box-shadow:0 3px 12px #0001}
+h2{color:var(--red)}
+button{background:var(--red);color:white;border:0;padding:11px 15px;border-radius:8px;cursor:pointer;margin:4px}
+button:disabled{opacity:.5}
+input{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
 .product{text-align:center;margin:0}
 .product img{width:100%;height:150px;object-fit:contain}
-.price{font-size:20px;color:var(--maroon);font-weight:bold}
+.price{font-size:20px;color:var(--red);font-weight:bold}
 .old{text-decoration:line-through;color:#888}
-footer{text-align:center;padding:18px;background:#4e0d0f;color:white}
+.contact{text-align:center;background:#fff1d5}
+.hidden{display:none!important}
+.adminTag{color:#176b32;font-weight:bold}
+footer{text-align:center;background:#4e0d0f;color:white;padding:18px}
 </style>
 </head>
 <body>
@@ -37,54 +38,49 @@ footer{text-align:center;padding:18px;background:#4e0d0f;color:white}
 </header>
 
 <main>
-<section class="intro">
+<section>
 <h2>আমাৰ দোকানলৈ স্বাগতম</h2>
-<p>আমাৰ ইয়াত গেলামালৰ লগতে স্কুল-কলেজৰ সামগ্ৰী, পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা আছে।</p>
-</section>
-
-<section class="services">
-<article class="service">
-<h3>🛒 গেলামাল আৰু শিক্ষা সামগ্ৰী</h3>
-<p>গেলামালৰ লগতে স্কুল-কলেজৰ প্ৰয়োজনীয় সামগ্ৰী।</p>
-</article>
-<article class="service">
-<h3>📸 ফটো আৰু জেৰক্স</h3>
-<p>পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা।</p>
-</article>
-<article class="service">
-<h3>📱 ৰিচাৰ্জ আৰু বিল</h3>
-<p>মবাইল ৰিচাৰ্জ, টিভি ৰিচাৰ্জ আৰু লাইটৰ বিল জমা।</p>
-</article>
-<article class="service">
-<h3>🏦 বেংকিং সেৱা</h3>
-<p>ফিংগাৰপ্ৰিণ্টৰ সহায়ত বেংকৰ টকা উলিওৱা আৰু পঠোৱাৰ সুবিধা।</p>
-</article>
+<p>আমাৰ ইয়াত গেলামাল, স্কুল-কলেজৰ সামগ্ৰী, পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা আছে।</p>
 </section>
 
 <section class="contact">
 <h2>যোগাযোগ কৰক</h2>
-<a class="phone" href="tel:9365682697">📞 9365682697</a>
+<a href="tel:9365682697">📞 9365682697</a>
 <p>ঠিকনা: কোঁচৰ গাঁও – বেবেজিয়া – নগাঁও, অসম</p>
 </section>
 
 <h2>🛍️ আমাৰ সামগ্ৰী</h2>
-<div id="newProducts" class="products">সামগ্ৰী লোড হৈ আছে...</div>
+<div id="newProducts" class="products">লোড হৈ আছে...</div>
 
-<section class="cart">
+<section>
 <h2>🛒 My Cart</h2>
 <div id="cartItems">Cart খালী আছে।</div>
 <h3 id="cartTotal">Total: ₹0</h3>
 <button id="orderButton">📲 WhatsApp Order</button>
 </section>
 
-<section class="panel">
-<h2>➕ নতুন সামগ্ৰী যোগ কৰক</h2>
+<!-- Admin Login -->
+<section>
+<h2>🔐 Admin Login</h2>
+<div id="loginArea">
+<input id="adminEmail" type="email" placeholder="Admin Email">
+<input id="adminPassword" type="password" placeholder="Password">
+<button id="loginButton">Login</button>
+<p id="loginStatus"></p>
+</div>
+<div id="adminArea" class="hidden">
+<p class="adminTag">Admin Login সফল হৈছে</p>
+<button id="logoutButton">Logout</button>
+<hr>
+<h2>➕ সামগ্ৰী যোগ / Edit</h2>
 <input id="pName" placeholder="সামগ্ৰীৰ নাম">
 <input id="pMrp" type="number" placeholder="MRP দাম">
 <input id="pPrice" type="number" placeholder="বিক্ৰী দাম">
 <input id="pPhoto" type="file" accept="image/*">
-<button id="saveButton">সামগ্ৰী যোগ কৰক</button>
+<button id="saveButton">সামগ্ৰী সংৰক্ষণ কৰক</button>
+<button id="cancelButton" class="hidden">Edit বাতিল</button>
 <p id="status"></p>
+</div>
 </section>
 </main>
 
@@ -95,8 +91,14 @@ import {initializeApp}
 from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
 
 import {
-getFirestore,collection,addDoc,getDocs
+ getFirestore,collection,addDoc,getDocs,
+ doc,updateDoc,deleteDoc
 } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
+
+import {
+ getAuth,signInWithEmailAndPassword,
+ onAuthStateChanged,signOut
+} from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
 
 const firebaseConfig={
 apiKey:"AIzaSyChKqZpEJXy5DJnXFN72sB0r2X70qpAfw",
@@ -109,24 +111,27 @@ appId:"1:821034696433:web:862caa3a53065ff44e3350"
 
 const app=initializeApp(firebaseConfig);
 const db=getFirestore(app);
+const auth=getAuth(app);
 const productsCollection=collection(db,"products");
 
-const area=document.getElementById("newProducts");
-const statusBox=document.getElementById("status");
-
+const $=id=>document.getElementById(id);
 let products=[];
 let cart=JSON.parse(localStorage.getItem("mahakalCart")||"[]");
+let editingId=null;
+
+function isAdmin(){
+return !!auth.currentUser;
+}
 
 function saveCart(){
 localStorage.setItem("mahakalCart",JSON.stringify(cart));
 }
 
 function showCart(){
-const box=document.getElementById("cartItems");
-const totalBox=document.getElementById("cartTotal");
+const box=$("cartItems");
 box.replaceChildren();
 
-if(cart.length===0){
+if(!cart.length){
 box.textContent="Cart খালী আছে।";
 }
 
@@ -136,18 +141,17 @@ row.textContent=item.name+" - ₹"+item.price+" ";
 
 const remove=document.createElement("button");
 remove.textContent="Remove";
-remove.addEventListener("click",()=>{
+remove.onclick=()=>{
 cart.splice(index,1);
 saveCart();
 showCart();
+};
+row.append(remove);
+box.append(row);
 });
 
-row.appendChild(remove);
-box.appendChild(row);
-});
-
-const total=cart.reduce((sum,item)=>sum+Number(item.price),0);
-totalBox.textContent="Total: ₹"+total;
+const total=cart.reduce((s,p)=>s+Number(p.price),0);
+$("cartTotal").textContent="Total: ₹"+total;
 }
 
 function addCart(product){
@@ -158,78 +162,82 @@ alert("সামগ্ৰী Cart-ত যোগ হ'ল!");
 }
 
 function renderProducts(){
+const area=$("newProducts");
 area.replaceChildren();
 
-if(products.length===0){
+if(!products.length){
 area.textContent="এতিয়ালৈ কোনো সামগ্ৰী যোগ কৰা হোৱা নাই।";
 return;
 }
 
-products.forEach(product=>{
+products.forEach(p=>{
 const card=document.createElement("div");
 card.className="product";
 
-const photo=document.createElement("img");
-photo.alt=product.name||"Product photo";
-if(product.photo)photo.src=product.photo;
+const img=document.createElement("img");
+img.alt=p.name;
+if(p.photo)img.src=p.photo;
 
 const name=document.createElement("h3");
-name.textContent=product.name||"সামগ্ৰী";
+name.textContent=p.name;
 
 const mrp=document.createElement("p");
 mrp.className="old";
-mrp.textContent="MRP: ₹"+(product.mrp||0);
+mrp.textContent="MRP: ₹"+(p.mrp||0);
 
 const price=document.createElement("p");
 price.className="price";
-price.textContent="₹"+product.price;
+price.textContent="₹"+p.price;
 
-const button=document.createElement("button");
-button.textContent="Add to Cart 🛒";
-button.addEventListener("click",()=>addCart(product));
+const add=document.createElement("button");
+add.textContent="Add to Cart 🛒";
+add.onclick=()=>addCart(p);
 
-card.append(photo,name,mrp,price,button);
-area.appendChild(card);
+card.append(img,name,mrp,price,add);
+
+if(isAdmin()){
+const edit=document.createElement("button");
+edit.textContent="Edit";
+edit.onclick=()=>editProduct(p);
+
+const del=document.createElement("button");
+del.textContent="Delete";
+del.onclick=()=>removeProduct(p.id);
+
+card.append(edit,del);
+}
+
+area.append(card);
 });
 }
 
 async function loadProducts(){
-area.textContent="সামগ্ৰী লোড হৈ আছে...";
+$("newProducts").textContent="সামগ্ৰী লোড হৈ আছে...";
 try{
-const snapshot=await getDocs(productsCollection);
-products=[];
-snapshot.forEach(doc=>{
-products.push({id:doc.id,...doc.data()});
-});
+const snap=await getDocs(productsCollection);
+products=snap.docs.map(d=>({id:d.id,...d.data()}));
 renderProducts();
-}catch(error){
-area.textContent="সামগ্ৰী লোড নহ'ল: "+error.message;
+}catch(e){
+$("newProducts").textContent="Error: "+e.message;
 }
 }
 
 function compressPhoto(file){
 return new Promise((resolve,reject)=>{
 const reader=new FileReader();
-reader.onerror=()=>reject(new Error("ফটো পঢ়িব পৰা নগ'ল"));
-
+reader.onerror=()=>reject(Error("ফটো পঢ়িব পৰা নগ'ল"));
 reader.onload=()=>{
 const img=new Image();
-img.onerror=()=>reject(new Error("ফটো খোলিব পৰা নগ'ল"));
-
+img.onerror=()=>reject(Error("ফটো খোলিব পৰা নগ'ল"));
 img.onload=()=>{
 const canvas=document.createElement("canvas");
-const maxSize=500;
-const scale=Math.min(1,maxSize/Math.max(img.width,img.height));
+const scale=Math.min(1,500/Math.max(img.width,img.height));
 canvas.width=Math.round(img.width*scale);
 canvas.height=Math.round(img.height*scale);
-
-const context=canvas.getContext("2d");
-context.drawImage(img,0,0,canvas.width,canvas.height);
-
+canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
 const data=canvas.toDataURL("image/jpeg",0.55);
-
 if(data.length>700000){
-reject(new Error("ফটো বহুত ডাঙৰ। সৰু ফটো বাছনি কৰক।"));
+reject(Error("ফটো বহুত ডাঙৰ। সৰু ফটো বাছনি কৰক।"));
 return;
 }
 resolve(data);
@@ -241,78 +249,118 @@ reader.readAsDataURL(file);
 }
 
 async function saveProduct(){
-const name=document.getElementById("pName").value.trim();
-const mrp=document.getElementById("pMrp").value;
-const price=document.getElementById("pPrice").value;
-const file=document.getElementById("pPhoto").files[0];
+if(!isAdmin())return alert("Admin Login কৰক।");
 
-if(!name||!price||Number(price)<=0){
-alert("সামগ্ৰীৰ নাম আৰু সঠিক বিক্ৰী দাম লিখক।");
+const name=$("pName").value.trim();
+const mrp=Number($("pMrp").value||0);
+const price=Number($("pPrice").value);
+const file=$("pPhoto").files[0];
+
+if(!name||!price||price<=0){
+alert("সঠিক নাম আৰু দাম লিখক।");
 return;
 }
 
-if(!file){
-alert("সামগ্ৰীৰ ফটো বাছনি কৰক।");
-return;
-}
-
-if(!file.type.startsWith("image/")){
-alert("কেৱল ফটো বাছনি কৰক।");
-return;
-}
-
-const button=document.getElementById("saveButton");
+const button=$("saveButton");
 button.disabled=true;
-statusBox.textContent="সামগ্ৰী সংৰক্ষণ হৈ আছে...";
+$("status").textContent="সংৰক্ষণ হৈ আছে...";
 
 try{
-const photo=await compressPhoto(file);
+let photo=null;
+if(file){
+if(!file.type.startsWith("image/"))throw Error("কেৱল ফটো বাছনি কৰক।");
+photo=await compressPhoto(file);
+}
 
-await addDoc(productsCollection,{
-name:name,
-mrp:Number(mrp||0),
-price:Number(price),
-photo:photo,
-createdAt:new Date().toISOString()
-});
+const data={name,mrp,price};
+if(photo)data.photo=photo;
 
-statusBox.textContent="সামগ্ৰী সফলভাৱে সংৰক্ষণ হ'ল!";
-document.getElementById("pName").value="";
-document.getElementById("pMrp").value="";
-document.getElementById("pPrice").value="";
-document.getElementById("pPhoto").value="";
+if(editingId){
+await updateDoc(doc(db,"products",editingId),data);
+}else{
+if(!photo)throw Error("সামগ্ৰীৰ ফটো বাছনি কৰক।");
+data.photo=photo;
+data.createdAt=new Date().toISOString();
+await addDoc(productsCollection,data);
+}
+
+$("status").textContent="সামগ্ৰী সফলভাৱে সংৰক্ষণ হ'ল!";
+resetForm();
 await loadProducts();
-
-}catch(error){
-statusBox.textContent="Error: "+error.message;
+}catch(e){
+$("status").textContent="Error: "+e.message;
 }finally{
 button.disabled=false;
 }
 }
 
-document.getElementById("saveButton")
-.addEventListener("click",saveProduct);
+function editProduct(p){
+if(!isAdmin())return;
+editingId=p.id;
+$("pName").value=p.name||"";
+$("pMrp").value=p.mrp||"";
+$("pPrice").value=p.price||"";
+$("saveButton").textContent="Update কৰক";
+$("cancelButton").classList.remove("hidden");
+$("pPhoto").value="";
+window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
 
-document.getElementById("orderButton")
-.addEventListener("click",()=>{
-if(cart.length===0){
+async function removeProduct(id){
+if(!isAdmin())return;
+if(!confirm("এই সামগ্ৰী Delete কৰিব বিচাৰে নেকি?"))return;
+try{
+await deleteDoc(doc(db,"products",id));
+await loadProducts();
+}catch(e){alert("Delete নহ'ল: "+e.message);}
+}
+
+function resetForm(){
+editingId=null;
+$("pName").value="";
+$("pMrp").value="";
+$("pPrice").value="";
+$("pPhoto").value="";
+$("saveButton").textContent="সামগ্ৰী সংৰক্ষণ কৰক";
+$("cancelButton").classList.add("hidden");
+}
+
+$("cancelButton").onclick=resetForm;
+$("saveButton").onclick=saveProduct;
+
+$("loginButton").onclick=async()=>{
+const email=$("adminEmail").value.trim();
+const password=$("adminPassword").value;
+$("loginStatus").textContent="Login হৈ আছে...";
+try{
+await signInWithEmailAndPassword(auth,email,password);
+$("loginStatus").textContent="Login সফল!";
+}catch(e){
+$("loginStatus").textContent="Login নহ'ল। Email আৰু Password পৰীক্ষা কৰক।";
+}
+};
+
+$("logoutButton").onclick=()=>signOut(auth);
+
+onAuthStateChanged(auth,user=>{
+$("loginArea").classList.toggle("hidden",!!user);
+$("adminArea").classList.toggle("hidden",!user);
+renderProducts();
+});
+
+$("orderButton").onclick=()=>{
+if(!cart.length){
 alert("আপোনাৰ Cart খালী আছে!");
 return;
 }
-
 let message="Namaste Mahakal Store! My Order:\n\n";
-cart.forEach((item,index)=>{
-message+=(index+1)+". "+item.name+" - ₹"+item.price+"\n";
+cart.forEach((p,i)=>{
+message+=(i+1)+". "+p.name+" - ₹"+p.price+"\n";
 });
-
-const total=cart.reduce((sum,item)=>sum+Number(item.price),0);
+const total=cart.reduce((s,p)=>s+Number(p.price),0);
 message+="\nTotal: ₹"+total;
-
-window.open(
-"https://wa.me/919365682697?text="+encodeURIComponent(message),
-"_blank"
-);
-});
+window.open("https://wa.me/919365682697?text="+encodeURIComponent(message),"_blank");
+};
 
 showCart();
 loadProducts();
