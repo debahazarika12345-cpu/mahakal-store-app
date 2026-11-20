@@ -118,9 +118,10 @@ const $=id=>document.getElementById(id);
 let products=[];
 let cart=JSON.parse(localStorage.getItem("mahakalCart")||"[]");
 let editingId=null;
+const ADMIN_UID = "tvyQLVaTHXUu6MuEtgflckRHNtU2";
 
 function isAdmin(){
-return !!auth.currentUser;
+  return auth.currentUser?.uid === ADMIN_UID;
 }
 
 function saveCart(){
