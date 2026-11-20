@@ -105,7 +105,7 @@ function removeItem(i) {
   cart.splice(i, 1);
   showCart();
 }
-loadProducts();
+
 window.loadProducts = async function() {
   area.innerHTML = '';
 
@@ -113,7 +113,7 @@ window.loadProducts = async function() {
     const snapshot = await window.firebaseGetDocs(
       window.productsCollection
     );
-
+window.loadProducts();
     snapshot.forEach(doc => {
       const p = doc.data();
 
