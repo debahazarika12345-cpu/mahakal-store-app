@@ -337,7 +337,7 @@ try{
 await signInWithEmailAndPassword(auth,email,password);
 $("loginStatus").textContent="Login সফল!";
 }catch(e){
-$("loginStatus").textContent="Login নহ'ল। Email আৰু Password পৰীক্ষা কৰক।";
+$("loginStatus").textContent="Error: "+e.code+" - "+e.message;
 }
 };
 
