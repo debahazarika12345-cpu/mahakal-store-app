@@ -1,220 +1,322 @@
+
 <!DOCTYPE html>
 <html lang="as">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#7b1113">
-  <title>মহাকাল ষ্টোৰ | Mahakal Store</title>
-  <style>
-    :root{--maroon:#7b1113;--gold:#f4c76b;--cream:#fff8e9;--ink:#292321}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-    header{background:linear-gradient(135deg,#651012,#a32124);color:#fff;text-align:center;padding:34px 18px 28px}
-    header .mark{font-size:42px}
-    h1{font-size:clamp(30px,7vw,44px);margin:4px 0;color:var(--gold)}
-    header p{margin:4px 0 0;font-size:16px}
-    main{max-width:900px;margin:auto;padding:22px 16px 42px}
-    .intro,.contact,.service{background:#fff;border-radius:16px;padding:20px;box-shadow:0 5px 18px #3d1a1010}
-    .intro{text-align:center;border:1px solid #f0dfc1}
-    h2{color:var(--maroon);margin:0 0 10px}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
-    .service{border-top:4px solid var(--gold)}
-    .service h3{margin:0 0 6px;color:var(--maroon);font-size:18px}
-    .service p{margin:0;color:#5b514c}
-    .contact{text-align:center;background:#fff1d5}
-    .phone{display:inline-block;background:var(--maroon);color:white;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:700;margin-top:8px}
-    .note{font-size:13px;color:#6e625b;margin-top:14px}
-    footer{text-align:center;padding:18px;background:#4e0d0f;color:#fff;font-size:13px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7b1113">
+<title>মহাকাল ষ্টোৰ | Mahakal Store</title>
+<style>
+:root{--maroon:#7b1113;--gold:#f4c76b;--cream:#fff8e9}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--cream);color:#292321}
+header{background:linear-gradient(135deg,#651012,#a32124);color:white;text-align:center;padding:30px 15px}
+header h1{color:var(--gold)}
+main{max-width:900px;margin:auto;padding:16px}
+.intro,.service,.contact,.panel,.product,.cart{background:white;padding:16px;border-radius:14px;margin:14px 0;box-shadow:0 3px 12px #00000010}
+h2{color:var(--maroon)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.service{border-top:4px solid var(--gold)}
+.contact{text-align:center;background:#fff1d5}
+.phone,button{display:inline-block;background:var(--maroon);color:white;border:0;padding:12px 18px;border-radius:9px;text-decoration:none;font-size:15px;cursor:pointer}
+input{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.product{text-align:center;margin:0}
+.product img{width:100%;height:150px;object-fit:contain}
+.price{font-size:20px;color:var(--maroon);font-weight:bold}
+.old{text-decoration:line-through;color:#888}
+footer{text-align:center;padding:18px;background:#4e0d0f;color:white}
+</style>
 </head>
 <body>
-  <header>
-    <div class="mark">🛍️</div>
-    <h1>মহাকাল ষ্টোৰ</h1>
-    <p>Mahakal Store</p>
-    <p>আপোনাৰ ওচৰৰ সুবিধাজনক দোকান</p>
-  </header>
 
-  <main>
-    <section class="intro">
-      <h2>আমাৰ দোকানলৈ স্বাগতম</h2>
-      <p>আমাৰ ইয়াত গেলামালৰ লগতে স্কুল-কলেজৰ সামগ্ৰী, পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা আছে।</p>
-    </section>
+<header>
+<div style="font-size:40px">🛍️</div>
+<h1>মহাকাল ষ্টোৰ</h1>
+<p>Mahakal Store</p>
+<p>আপোনাৰ ওচৰৰ সুবিধাজনক দোকান</p>
+</header>
 
-    <section class="services" aria-label="আমাৰ সেৱাসমূহ">
-      <article class="service">
-        <h3>🛒 গেলামাল আৰু শিক্ষা সামগ্ৰী</h3>
-        <p>গেলামালৰ লগতে স্কুল-কলেজৰ প্ৰয়োজনীয় সামগ্ৰী।</p>
-      </article>
-      <article class="service">
-        <h3>📸 ফটো আৰু জেৰক্স</h3>
-        <p>পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা।</p>
-      </article>
-      <article class="service">
-        <h3>📱 ৰিচাৰ্জ আৰু বিল</h3>
-        <p>মবাইল ৰিচাৰ্জ, টিভি ৰিচাৰ্জ আৰু লাইটৰ বিল জমা।</p>
-      </article>
-      <article class="service">
-        <h3>🏦 বেংকিং সেৱা</h3>
-        <p>ফিংগাৰপ্ৰিণ্টৰ সহায়ত সকলো বেংকৰ টকা উলিওৱা আৰু পঠোৱাৰ সুবিধা।</p>
-      </article>
-    </section>
+<main>
+<section class="intro">
+<h2>আমাৰ দোকানলৈ স্বাগতম</h2>
+<p>আমাৰ ইয়াত গেলামালৰ লগতে স্কুল-কলেজৰ সামগ্ৰী, পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা আছে।</p>
+</section>
 
-    <section class="contact">
-      <h2>যোগাযোগ কৰক</h2>
-      <p>ফোন কৰি দোকানৰ বিষয়ে জানিব পাৰে।</p>
-      <a class="phone" href="tel:9365682697">📞 9365682697</a>
-      <p class="note">ঠিকনা: কোঁচৰ গাঁও – বেবেজিয়া – নগাঁও, অসম</p>
-   <a class="phone" href="#" onclick="orderWhatsApp(); return false;">📲 WhatsApp Order</a> </section>
-  </main>
-<div id="newProducts"></div> <div style="background:#fff;padding:15px;margin:15px;border-radius:12px">
-  <h2>➕ नया सामान जोड़ें</h2>
+<section class="services">
+<article class="service">
+<h3>🛒 গেলামাল আৰু শিক্ষা সামগ্ৰী</h3>
+<p>গেলামালৰ লগতে স্কুল-কলেজৰ প্ৰয়োজনীয় সামগ্ৰী।</p>
+</article>
+<article class="service">
+<h3>📸 ফটো আৰু জেৰক্স</h3>
+<p>পাছপৰ্ট ফটো, ৰঙীন ফটো আৰু জেৰক্সৰ সুবিধা।</p>
+</article>
+<article class="service">
+<h3>📱 ৰিচাৰ্জ আৰু বিল</h3>
+<p>মবাইল ৰিচাৰ্জ, টিভি ৰিচাৰ্জ আৰু লাইটৰ বিল জমা।</p>
+</article>
+<article class="service">
+<h3>🏦 বেংকিং সেৱা</h3>
+<p>ফিংগাৰপ্ৰিণ্টৰ সহায়ত বেংকৰ টকা উলিওৱা আৰু পঠোৱাৰ সুবিধা।</p>
+</article>
+</section>
 
-  <input id="pName" placeholder="सामान का नाम">
+<section class="contact">
+<h2>যোগাযোগ কৰক</h2>
+<a class="phone" href="tel:9365682697">📞 9365682697</a>
+<p>ঠিকনা: কোঁচৰ গাঁও – বেবেজিয়া – নগাঁও, অসম</p>
+</section>
 
-  <input id="pMrp" type="number" placeholder="MRP कीमत">
+<h2>🛍️ আমাৰ সামগ্ৰী</h2>
+<div id="newProducts" class="products">সামগ্ৰী লোড হৈ আছে...</div>
 
-  <input id="pPrice" type="number" placeholder="बिक्री कीमत">
+<section class="cart">
+<h2>🛒 My Cart</h2>
+<div id="cartItems">Cart খালী আছে।</div>
+<h3 id="cartTotal">Total: ₹0</h3>
+<button id="orderButton">📲 WhatsApp Order</button>
+</section>
 
-  <input id="pPhoto" type="file" accept="image/*">
+<section class="panel">
+<h2>➕ নতুন সামগ্ৰী যোগ কৰক</h2>
+<input id="pName" placeholder="সামগ্ৰীৰ নাম">
+<input id="pMrp" type="number" placeholder="MRP দাম">
+<input id="pPrice" type="number" placeholder="বিক্ৰী দাম">
+<input id="pPhoto" type="file" accept="image/*">
+<button id="saveButton">সামগ্ৰী যোগ কৰক</button>
+<p id="status"></p>
+</section>
+</main>
 
-  <button onclick="saveProduct()">सामान जोड़ें</button>
-</div>
-<script>
-const products = JSON.parse(localStorage.getItem('mahakalProducts') || '[]');
-const area = document.getElementById('newProducts');
+<footer>© Mahakal Store</footer>
 
-let cart = JSON.parse(localStorage.getItem('mahakalCart') || '[]');
-
-const cartBox = document.createElement('div');
-area.before(cartBox);
-
-function showCart() {
-  cartBox.innerHTML = '<h2>🛒 My Cart</h2>';
-
-  cart.forEach((item, i) => {
-    cartBox.innerHTML += `
-      <p>${item.name} - ₹${item.price} 
-      <button onclick="removeItem(${i})">Remove</button></p>`;
-  });
-
-  localStorage.setItem('mahakalCart', JSON.stringify(cart));
-}
-
-function removeItem(i) {
-  cart.splice(i, 1);
-  showCart();
-}
-
-window.loadProducts = async function() {
-  area.innerHTML = '';
-
-  try {
-    const snapshot = await window.firebaseGetDocs(
-      window.productsCollection
-    );
-window.loadProducts();
-    snapshot.forEach(doc => {
-      const p = doc.data();
-
-      area.innerHTML += `
-        <div style="border:1px solid #ddd;padding:12px;margin:10px;border-radius:10px;text-align:center">
-          <img src="${p.photo || ''}" style="width:120px;max-width:100%">
-          <h3>${p.name}</h3>
-          <p>MRP: ₹${p.mrp || 0}</p>
-          <h3>₹${p.price}</h3>
-          <button onclick="addCart('${String(p.name).replace(/'/g, "\\'")}',${Number(p.price)})">
-            Add to Cart 🛒
-          </button>
-        </div>`;
-    });
-  } catch (error) {
-    alert('Products load error: ' + error.message);
-  }
-};
-
-
-uniqueProducts.forEach(p => {
-  area.innerHTML += `
-    <div style="border:1px solid #ddd;padding:12px;margin:10px;border-radius:10px;text-align:center">
-      <img src="${p.photo}" style="width:120px;max-width:100%">
-      <h3>${p.name}</h3>
-      <p>MRP: ₹${p.mrp}</p>
-      <h3>₹${p.price}</h3>
-      <button onclick="addCart('${p.name.replace(/'/g, "\\'")}',${Number(p.price)})">
-        Add to Cart 🛒
-      </button>
-    </div>`;
-});
-
-function addCart(name, price) {
-  cart.push({name, price});
-  showCart();
-  alert('Added to Cart!');
-}
-function orderWhatsApp() {
-  if (cart.length === 0) {
-    alert('Your cart is empty!');
-    return;
-  }
-
-  let message = 'Namaste Mahakal Store! My Order:\n\n';
-
-  cart.forEach((item, i) => {
-    message += (i + 1) + '. ' + item.name + ' - ₹' + item.price + '\n';
-  });
-
-  let total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-  message += '\nTotal: ₹' + total;
-
-  window.location.href =
-'https://wa.me/919365682697?text=' + encodeURIComponent(message);
-}
-showCart();
-
-async function saveProduct() {
-  let name = document.getElementById('pName').value.trim();
-  let mrp = document.getElementById('pMrp').value;
-  let price = document.getElementById('pPrice').value;
-
-  if (!name || !price) {
-    alert('Name aur price bhariye');
-    return;
-  }
-
-  try {
-    await window.firebaseAddDoc(window.productsCollection, {
-      name: name,
-      mrp: Number(mrp || 0),
-      price: Number(price)
-    });
-    alert('Saman save ho gaya!');
-  } catch (error) {
-    alert('Error: ' + error.message);
-  }
-}
-  
-</script>
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+import {initializeApp}
+from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+
 import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs
+getFirestore,collection,addDoc,getDocs
 } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyChKqZpEJXy5DJnXFN72sB0r2X70qpAfXw",
-  authDomain: "mahakal-store-21704.firebaseapp.com",
-  projectId: "mahakal-store-21704",
-  storageBucket: "mahakal-store-21704.firebasestorage.app",
-  messagingSenderId: "821034696433",
-  appId: "1:821034696433:web:862caa3a53065ff44e3350"
+const firebaseConfig={
+apiKey:"AIzaSyChKqZpEJXy5DJnXFN72sB0r2X70qpAfw",
+authDomain:"mahakal-store-21704.firebaseapp.com",
+projectId:"mahakal-store-21704",
+storageBucket:"mahakal-store-21704.firebasestorage.app",
+messagingSenderId:"821034696433",
+appId:"1:821034696433:web:862caa3a53065ff44e3350"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+const productsCollection=collection(db,"products");
 
-window.db = db;
-window.productsCollection = collection
+const area=document.getElementById("newProducts");
+const statusBox=document.getElementById("status");
+
+let products=[];
+let cart=JSON.parse(localStorage.getItem("mahakalCart")||"[]");
+
+function saveCart(){
+localStorage.setItem("mahakalCart",JSON.stringify(cart));
+}
+
+function showCart(){
+const box=document.getElementById("cartItems");
+const totalBox=document.getElementById("cartTotal");
+box.replaceChildren();
+
+if(cart.length===0){
+box.textContent="Cart খালী আছে।";
+}
+
+cart.forEach((item,index)=>{
+const row=document.createElement("p");
+row.textContent=item.name+" - ₹"+item.price+" ";
+
+const remove=document.createElement("button");
+remove.textContent="Remove";
+remove.addEventListener("click",()=>{
+cart.splice(index,1);
+saveCart();
+showCart();
+});
+
+row.appendChild(remove);
+box.appendChild(row);
+});
+
+const total=cart.reduce((sum,item)=>sum+Number(item.price),0);
+totalBox.textContent="Total: ₹"+total;
+}
+
+function addCart(product){
+cart.push({name:product.name,price:Number(product.price)});
+saveCart();
+showCart();
+alert("সামগ্ৰী Cart-ত যোগ হ'ল!");
+}
+
+function renderProducts(){
+area.replaceChildren();
+
+if(products.length===0){
+area.textContent="এতিয়ালৈ কোনো সামগ্ৰী যোগ কৰা হোৱা নাই।";
+return;
+}
+
+products.forEach(product=>{
+const card=document.createElement("div");
+card.className="product";
+
+const photo=document.createElement("img");
+photo.alt=product.name||"Product photo";
+if(product.photo)photo.src=product.photo;
+
+const name=document.createElement("h3");
+name.textContent=product.name||"সামগ্ৰী";
+
+const mrp=document.createElement("p");
+mrp.className="old";
+mrp.textContent="MRP: ₹"+(product.mrp||0);
+
+const price=document.createElement("p");
+price.className="price";
+price.textContent="₹"+product.price;
+
+const button=document.createElement("button");
+button.textContent="Add to Cart 🛒";
+button.addEventListener("click",()=>addCart(product));
+
+card.append(photo,name,mrp,price,button);
+area.appendChild(card);
+});
+}
+
+async function loadProducts(){
+area.textContent="সামগ্ৰী লোড হৈ আছে...";
+try{
+const snapshot=await getDocs(productsCollection);
+products=[];
+snapshot.forEach(doc=>{
+products.push({id:doc.id,...doc.data()});
+});
+renderProducts();
+}catch(error){
+area.textContent="সামগ্ৰী লোড নহ'ল: "+error.message;
+}
+}
+
+function compressPhoto(file){
+return new Promise((resolve,reject)=>{
+const reader=new FileReader();
+reader.onerror=()=>reject(new Error("ফটো পঢ়িব পৰা নগ'ল"));
+
+reader.onload=()=>{
+const img=new Image();
+img.onerror=()=>reject(new Error("ফটো খোলিব পৰা নগ'ল"));
+
+img.onload=()=>{
+const canvas=document.createElement("canvas");
+const maxSize=500;
+const scale=Math.min(1,maxSize/Math.max(img.width,img.height));
+canvas.width=Math.round(img.width*scale);
+canvas.height=Math.round(img.height*scale);
+
+const context=canvas.getContext("2d");
+context.drawImage(img,0,0,canvas.width,canvas.height);
+
+const data=canvas.toDataURL("image/jpeg",0.55);
+
+if(data.length>700000){
+reject(new Error("ফটো বহুত ডাঙৰ। সৰু ফটো বাছনি কৰক।"));
+return;
+}
+resolve(data);
+};
+img.src=reader.result;
+};
+reader.readAsDataURL(file);
+});
+}
+
+async function saveProduct(){
+const name=document.getElementById("pName").value.trim();
+const mrp=document.getElementById("pMrp").value;
+const price=document.getElementById("pPrice").value;
+const file=document.getElementById("pPhoto").files[0];
+
+if(!name||!price||Number(price)<=0){
+alert("সামগ্ৰীৰ নাম আৰু সঠিক বিক্ৰী দাম লিখক।");
+return;
+}
+
+if(!file){
+alert("সামগ্ৰীৰ ফটো বাছনি কৰক।");
+return;
+}
+
+if(!file.type.startsWith("image/")){
+alert("কেৱল ফটো বাছনি কৰক।");
+return;
+}
+
+const button=document.getElementById("saveButton");
+button.disabled=true;
+statusBox.textContent="সামগ্ৰী সংৰক্ষণ হৈ আছে...";
+
+try{
+const photo=await compressPhoto(file);
+
+await addDoc(productsCollection,{
+name:name,
+mrp:Number(mrp||0),
+price:Number(price),
+photo:photo,
+createdAt:new Date().toISOString()
+});
+
+statusBox.textContent="সামগ্ৰী সফলভাৱে সংৰক্ষণ হ'ল!";
+document.getElementById("pName").value="";
+document.getElementById("pMrp").value="";
+document.getElementById("pPrice").value="";
+document.getElementById("pPhoto").value="";
+await loadProducts();
+
+}catch(error){
+statusBox.textContent="Error: "+error.message;
+}finally{
+button.disabled=false;
+}
+}
+
+document.getElementById("saveButton")
+.addEventListener("click",saveProduct);
+
+document.getElementById("orderButton")
+.addEventListener("click",()=>{
+if(cart.length===0){
+alert("আপোনাৰ Cart খালী আছে!");
+return;
+}
+
+let message="Namaste Mahakal Store! My Order:\n\n";
+cart.forEach((item,index)=>{
+message+=(index+1)+". "+item.name+" - ₹"+item.price+"\n";
+});
+
+const total=cart.reduce((sum,item)=>sum+Number(item.price),0);
+message+="\nTotal: ₹"+total;
+
+window.open(
+"https://wa.me/919365682697?text="+encodeURIComponent(message),
+"_blank"
+);
+});
+
+showCart();
+loadProducts();
+</script>
+</body>
+</html>
