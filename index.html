@@ -106,9 +106,33 @@ function removeItem(i) {
   showCart();
 }
 
-const uniqueProducts = [
-  ...new Map(products.map(p => [p.name, p])).values()
-];
+window.loadProducts = async function() {
+  area.innerHTML = '';
+
+  try {
+    const snapshot = await window.firebaseGetDocs(
+      window.productsCollection
+    );
+
+    snapshot.forEach(doc => {
+      const p = doc.data();
+
+      area.innerHTML += `
+        <div style="border:1px solid #ddd;padding:12px;margin:10px;border-radius:10px;text-align:center">
+          <img src="${p.photo || ''}" style="width:120px;max-width:100%">
+          <h3>${p.name}</h3>
+          <p>MRP: ₹${p.mrp || 0}</p>
+          <h3>₹${p.price}</h3>
+          <button onclick="addCart('${String(p.name).replace(/'/g, "\\'")}',${Number(p.price)})">
+            Add to Cart 🛒
+          </button>
+        </div>`;
+    });
+  } catch (error) {
+    alert('Products load error: ' + error.message);
+  }
+};
+
 
 uniqueProducts.forEach(p => {
   area.innerHTML += `
